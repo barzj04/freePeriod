@@ -11,7 +11,7 @@
   const DEFAULT_MODEL = { anthropic: 'claude-haiku-5-5', gemini: 'gemini-2.5-flash' };
   // Shared AI server (Cloudflare Worker in /worker) so judges can use AI without their own key.
   // Paste your Worker URL here after deploying it, e.g. 'https://freeperiod-ai.yourname.workers.dev'
-  const PROXY_URL = '';
+  const PROXY_URL = 'https://freeperiod-ai.arleenchong.workers.dev/';
   let settings = Object.assign({ provider: 'anthropic', key: '', model: DEFAULT_MODEL.anthropic, proxy: '', warn: 5, scale: 1, theme: '' }, load('fp_settings', {}));
   let S = load('fp_state', null); // current session
   let tasks = load('fp_tasks', []); // the user's task list, kept between sessions
